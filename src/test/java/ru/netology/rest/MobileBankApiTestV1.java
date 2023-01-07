@@ -28,7 +28,7 @@ class MobileBankApiTestV1 {
 //                .body("", hasSize(3))
 //                .body("[1].currency", equalTo("USD"))
 //                .body("every {it.balance >= 0}", is(true))
-//                .body(matchesJsonSchemaInClasspath("accounts.schema.json"))
+                .body(matchesJsonSchemaInClasspath("accounts.schema.json"))
         ;
     }
 }
