@@ -21,7 +21,7 @@ class MobileBankApiTestV1 {
                 .get("/demo/accounts")
                 // Проверки
                 .then()
-                .statusCode(200)
+                .statusCode(404)
 
 //                .header("Content-Type", "application/json; charset=UTF-8")
 //                .contentType(ContentType.JSON)
