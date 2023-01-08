@@ -2,7 +2,6 @@ package ru.netology.rest;
 
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
-
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.equalTo;
@@ -29,6 +28,10 @@ class MobileBankApiTestV1 {
 //                .body("[1].currency", equalTo("USD"))
 //                .body("every {it.balance >= 0}", is(true))
                 .body(matchesJsonSchemaInClasspath("accounts.schema.json"))
+//                .body("every {it.currency equalTo("USD")}" or "every {it.currency equalTo("RUB")}", is(true))
+                //.body("every {it.currency == "USD"}", is(true))
+                //.body("[1].currency", equalTo("RUB", "USD"))
+                //.body("every {it.currency, equalTo("USD","RUB")})
         ;
     }
 }
